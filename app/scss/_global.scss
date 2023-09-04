@@ -9,8 +9,21 @@ body {
   font-size: 20px;
   color: $default-color;
   line-height: 1.5;
-  background-color: #F9FAFF;
+  background-color: $silver-100;
   @extend %rubik-400;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main {
@@ -22,4 +35,54 @@ body {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.btn {
+  background-color: $accent-color;
+  color: $white;
+  border-radius: 6px;
+  line-height: 1.3;
+  &:hover {
+    color: $accent-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.7),
+      0 5px 12px 0 rgba($accent-color, 0.2);
+  }
+  &:focus {
+    color: $accent-color;
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.7);
+    background-color: rgba(255, 122, 80, 0.1);
+  }
+  &:active {
+    background-color: rgba(255, 122, 80, 0.1);
+    color: $accent-color;
+  }
+}
+
+.more {
+  color: $title-color;
+  font-size: 20px;
+  text-decoration: underline;
+  border-radius: 5px;
+  &:hover {
+    color: $accent-color;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.7);
+    text-decoration: none;
+  }
+  &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
+
+.title {
+  font-size: 36px;
+  color: $title-color;
+  line-height: 1.3;
+  font-weight: 500;
 }
